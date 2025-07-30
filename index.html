@@ -214,209 +214,250 @@ function gtag_report_conversion(url) {
                     </div>
                 </div>
                 <div class="carousel-item">
-<img class="w-100" src="img/Banner-2.jpg"  alt="tempo traveller rental bangalore, trusted tempo traveller service, tempo traveller hire for outstation trips">
-                    <div class="carousel-caption d-flex align-items-center">
-                      <div class="col-12 col-lg-6 text-center text-lg-start mb-4 mb-lg-0">
-                        <h6 class="text-white text-uppercase mb-3 animated slideInDown" style="margin-left: 50px;">// Best Bus Rental In Bangalore //</h6>
-                        <h1 class="display-3 text-white mb-4 pb-3 animated slideInDown" style="margin-left: 50px;">Single Maharaja seats for ultimate comfort</h1>
-                      </div>
-
-                      <div class="col-12 col-lg-5 d-flex justify-content-right justify-content-lg-end">
-                        <div class="form-container">
+                  <img class="w-100" src="img/Banner-2.jpg" alt="tempo traveller rental bangalore, trusted tempo traveller service, tempo traveller hire for outstation trips">
+                  <div class="carousel-caption d-flex flex-wrap flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-between" style="gap: 20px;">
+                    <div class="col-12 col-lg-6 text-center text-lg-start mb-3 mb-lg-0">
+                      <h6 class="text-white text-uppercase mb-3 animated slideInDown"> // Best Bus Rental In Bangalore //</h6>
+                      <h1 class="display-6 text-white mb-4 pb-3 animated slideInDown">Single Maharaja seats for ultimate comfort</h1>
+                    </div>
+                
+                    <div class="col-12 col-md-8 col-lg-5 d-flex justify-content-center">
+                      <div class="form-container">
                           
-    <style>
-      .form-container {
-        background: #ffc001;
-        padding: 20px;
-        width: 100%;
-        max-width: 420px;
-        border-radius: 10px;
-        font-family: sans-serif;
-      }
-  
-      .tabs, .sub-tabs {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 10px;
-      }
-  
-      .tab-btn, .sub-tab-btn {
-        flex: 1;
-        margin: 2px;
-        padding: 10px;
-        background: #000;
-        color: white;
-        border: none;
-        cursor: pointer;
-        font-weight: bold;
-      }
-  
-      .tab-btn.active, .sub-tab-btn.active {
-        background: white;
-        color: black;
-      }
-  
-      .form-group {
-        margin-bottom: 10px;
-      }
-  
-      .form-group input, .form-group select {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-      }
-  
-      .enquiry-btn {
-        background: black;
-        color: white;
-        padding: 12px;
-        width: 100%;
-        border: none;
-        border-radius: 5px;
-        font-weight: bold;
-        cursor: pointer;
-      }
-    </style>
+                        <style>
+                          .form-container {
+                            background: #ffc001;
+                            padding: 20px;
+                            width: 100%;
+                            max-width: 450px;
+                            border-radius: 8px;
+                            font-family: sans-serif;
+                          }
+                        
+                          .tabs, .sub-tabs {
+                            display: flex;
+                            justify-content: space-between;
+                            margin-bottom: 12px;
+                            gap: 6px;
+                            flex-wrap: wrap;
+                          }
+                        
+                          .tab-btn, .sub-tab-btn {
+                            flex: 1;
+                            padding: 10px 8px;
+                            font-size: 0.9rem;
+                            font-weight: bold;
+                            border: none;
+                            cursor: pointer;
+                            background-color: black;
+                            color: white;
+                            border-radius: 2px;
+                            white-space: nowrap;
+                          }
+                        
+                          .tab-btn.active, .sub-tab-btn.active {
+                            background-color: white;
+                            color: black;
+                          }
+                        
+                          .form-row {
+                            display: flex;
+                            gap: 10px;
+                            flex-wrap: wrap;
+                          }
+                        
+                          .form-group {
+                            flex: 1 1 48%;
+                            margin-bottom: 12px;
+                            position: relative;
+                          }
+                        
+                          .form-group input,
+                          .form-group select {
+                            width: 100%;
+                            padding: 10px 12px 10px 38px;
+                            font-size: 0.9rem;
+                            border: 1px solid #ddd;
+                            border-radius: 5px;
+                          }
+                        
+                          .form-group::before {
+                            content: "📍";
+                            position: absolute;
+                            left: 12px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            font-size: 1rem;
+                          }
+                        
+                          .form-group.date::before {
+                            content: "📅";
+                          }
+                        
+                          .enquiry-btn {
+                            background: black;
+                            color: white;
+                            padding: 12px;
+                            width: 100%;
+                            border: none;
+                            border-radius: 5px;
+                            font-weight: bold;
+                            font-size: 0.95rem;
+                            cursor: pointer;
+                          }
+                        
+                          @media (max-width: 576px) {
+                            .form-group {
+                              flex: 1 1 100%;
+                            }
+                          }
+                        </style>
+                        
   </head>
   <body>
-  
-  <div class="form-container">
-    <div class="tabs">
-      <button class="tab-btn active" data-form="outstation" onclick="showForm('outstation', this)">Outstation</button>
-      <button class="tab-btn" data-form="intercity" onclick="showForm('intercity', this)">Intercity</button>
-      <button class="tab-btn" data-form="airport" onclick="showForm('airport', this)">Airport</button>
+    <div class="form-container">
+      <div class="tabs">
+        <button class="tab-btn active" data-form="outstation" onclick="showForm('outstation', this)">Outstation</button>
+        <button class="tab-btn" data-form="intercity" onclick="showForm('intercity', this)">Intercity</button>
+        <button class="tab-btn" data-form="airport" onclick="showForm('airport', this)">Airport</button>
+      </div>
+    
+      <div class="sub-tabs" id="subTabs"></div>
+    
+      <form id="formContent">
+        <!-- Form will be loaded here -->
+      </form>
     </div>
-  
-    <div class="sub-tabs" id="subTabs"></div>
-  
-    <form id="formContent">
-      <!-- Form will be loaded here -->
-    </form>
-  </div>
-  
-  <script>
-    const formTemplates = {
-      outstation: {
-        subTabs: ['Round Trip', 'Oneway'],
-        formFields: {
-          'Pickup Location': 'text',
-          'Travel Destination': 'text',
-          'Pickup Date': 'date',
-          'Drop Date': 'date'
+    
+    <script>
+      const formTemplates = {
+        outstation: {
+          subTabs: ['Round Trip', 'Oneway'],
+          formFields: {
+            'Pickup Location': 'text',
+            'Travel Destination': 'text',
+            'Pickup Date': 'date',
+            'Drop Date': 'date'
+          }
+        },
+        intercity: {
+          subTabs: [],
+          formFields: {
+            'Pickup Place': 'text',
+            'Travel Type': 'select',
+            'Date of Travel': 'date',
+            'Travel Time': 'time'
+          }
+        },
+        airport: {
+          subTabs: ['Pickup', 'Drop', 'Round Trip'],
+          formFields: {
+            'Pickup Place': 'text',
+            'Drop Place': 'text',
+            'Pick Up Date': 'date',
+            'Travel Time': 'time'
+          }
         }
-      },
-      intercity: {
-        subTabs: [],
-        formFields: {
-          'Pickup Place': 'text',
-          'Travel Type': 'select',
-          'Date of Travel': 'date',
-          'Travel Time': 'time'
+      };
+    
+      let currentForm = 'outstation';
+      let currentSubTab = '';
+    
+      function showForm(formName, btnEl = null) {
+        currentForm = formName;
+    
+        document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+        if (btnEl) {
+          btnEl.classList.add('active');
+        } else {
+          const fallbackBtn = document.querySelector(`.tab-btn[data-form="${formName}"]`);
+          if (fallbackBtn) fallbackBtn.classList.add('active');
         }
-      },
-      airport: {
-        subTabs: ['Pickup', 'Drop', 'Round Trip'],
-        formFields: {
-          'Pickup Place': 'text',
-          'Drop Place': 'text',
-          'Pick Up Date': 'date',
-          'Travel Time': 'time'
+    
+        renderSubTabs();
+        renderForm();
+      }
+    
+      function renderSubTabs() {
+        const subTabsContainer = document.getElementById('subTabs');
+        subTabsContainer.innerHTML = '';
+    
+        const subTabs = formTemplates[currentForm].subTabs;
+        if (subTabs.length) {
+          subTabs.forEach(sub => {
+            const btn = document.createElement('button');
+            btn.className = 'sub-tab-btn';
+            btn.innerText = sub;
+            btn.onclick = () => {
+              currentSubTab = sub;
+              document.querySelectorAll('.sub-tab-btn').forEach(b => b.classList.remove('active'));
+              btn.classList.add('active');
+            };
+            subTabsContainer.appendChild(btn);
+          });
+          currentSubTab = subTabs[0];
+          subTabsContainer.querySelector('button').classList.add('active');
         }
       }
-    };
-  
-    let currentForm = 'outstation';
-    let currentSubTab = '';
-  
-    function showForm(formName, btnEl = null) {
-      currentForm = formName;
-  
-      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-      if (btnEl) {
-        btnEl.classList.add('active');
-      } else {
-        const fallbackBtn = document.querySelector(`.tab-btn[data-form="${formName}"]`);
-        if (fallbackBtn) fallbackBtn.classList.add('active');
-      }
-  
-      renderSubTabs();
-      renderForm();
-    }
-  
-    function renderSubTabs() {
-      const subTabsContainer = document.getElementById('subTabs');
-      subTabsContainer.innerHTML = '';
-  
-      const subTabs = formTemplates[currentForm].subTabs;
-      if (subTabs.length) {
-        subTabs.forEach(sub => {
-          const btn = document.createElement('button');
-          btn.className = 'sub-tab-btn';
-          btn.innerText = sub;
-          btn.onclick = () => {
-            currentSubTab = sub;
-            document.querySelectorAll('.sub-tab-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-          };
-          subTabsContainer.appendChild(btn);
+    
+      function renderForm() {
+        const form = document.getElementById('formContent');
+        const fields = formTemplates[currentForm].formFields;
+        form.innerHTML = '';
+    
+        // Create form row wrapper for responsive layout
+        const formRow = document.createElement('div');
+        formRow.className = 'form-row';
+    
+        // Create the form fields dynamically
+        for (const label in fields) {
+          const inputType = fields[label];
+          const group = document.createElement('div');
+          group.className = 'form-group';
+    
+          if (inputType === 'select') {
+            const select = document.createElement('select');
+            const options = ['Shared', 'Private', 'Premium'];
+            options.forEach(opt => {
+              const option = document.createElement('option');
+              option.value = opt;
+              option.text = opt;
+              select.appendChild(option);
+            });
+            group.innerHTML = `<label>${label}</label>`;
+            group.appendChild(select);
+          } else {
+            group.innerHTML = `<label>${label}</label><input type="${inputType}" placeholder="${label}" />`;
+          }
+    
+          formRow.appendChild(group);
+        }
+    
+        // Append formRow to form
+        form.appendChild(formRow);
+    
+        // Add the "Enquiry Now" button
+        const submitBtn = document.createElement('button');
+        submitBtn.className = 'enquiry-btn';
+        submitBtn.type = 'submit';
+        submitBtn.innerText = 'ENQUIRY NOW →';
+    
+        // Popup alert
+        submitBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          alert('Thank you! You can contact us at +91 8073353626 😊');
         });
-        currentSubTab = subTabs[0];
-        subTabsContainer.querySelector('button').classList.add('active');
+    
+        form.appendChild(submitBtn);
       }
-    }
-  
-    function renderForm() {
-  const form = document.getElementById('formContent');
-  const fields = formTemplates[currentForm].formFields;
-  form.innerHTML = '';
-
-  // Create the form fields dynamically
-  for (const label in fields) {
-    const inputType = fields[label];
-    const group = document.createElement('div');
-    group.className = 'form-group';
-
-    if (inputType === 'select') {
-      const select = document.createElement('select');
-      const options = ['Shared', 'Private', 'Premium'];
-      options.forEach(opt => {
-        const option = document.createElement('option');
-        option.value = opt;
-        option.text = opt;
-        select.appendChild(option);
+    
+      // Initialize default form
+      document.addEventListener('DOMContentLoaded', () => {
+        const defaultBtn = document.querySelector('.tab-btn[data-form="outstation"]');
+        showForm('outstation', defaultBtn);
       });
-      group.innerHTML = `<label>${label}</label>`;
-      group.appendChild(select);
-    } else {
-      group.innerHTML = `<label>${label}</label><input type="${inputType}" placeholder="${label}" />`;
-    }
-
-    form.appendChild(group);
-  }
-
-  // Add the "Enquiry Now" button
-  const submitBtn = document.createElement('button');
-  submitBtn.className = 'enquiry-btn';
-  submitBtn.type = 'submit';
-  submitBtn.innerText = 'ENQUIRY NOW →';
-
-  // Add event listener to show the popup message
-  submitBtn.addEventListener('click', (e) => {
-    e.preventDefault();  // Prevent the form from submitting
-    alert('Thank you! You can contact us at +91 8073353626 😊');
-  });
-
-  form.appendChild(submitBtn);
-}
-
-  
-    // Run after DOM is fully loaded
-    document.addEventListener('DOMContentLoaded', () => {
-      const defaultBtn = document.querySelector('.tab-btn[data-form="outstation"]');
-      showForm('outstation', defaultBtn);
-    });
-  </script>
+    </script>
+    
                         </div>
                       </div>
                     </div>
