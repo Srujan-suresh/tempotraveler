@@ -367,39 +367,49 @@ function gtag_report_conversion(url) {
     }
   
     function renderForm() {
-      const form = document.getElementById('formContent');
-      const fields = formTemplates[currentForm].formFields;
-      form.innerHTML = '';
-  
-      for (const label in fields) {
-        const inputType = fields[label];
-        const group = document.createElement('div');
-        group.className = 'form-group';
-  
-        if (inputType === 'select') {
-          const select = document.createElement('select');
-          const options = ['Shared', 'Private', 'Premium'];
-          options.forEach(opt => {
-            const option = document.createElement('option');
-            option.value = opt;
-            option.text = opt;
-            select.appendChild(option);
-          });
-          group.innerHTML = `<label>${label}</label>`;
-          group.appendChild(select);
-        } else {
-          group.innerHTML = `<label>${label}</label><input type="${inputType}" placeholder="${label}" />`;
-        }
-  
-        form.appendChild(group);
-      }
-  
-      const submitBtn = document.createElement('button');
-      submitBtn.className = 'enquiry-btn';
-      submitBtn.type = 'submit';
-      submitBtn.innerText = 'ENQUIRY NOW →';
-      form.appendChild(submitBtn);
+  const form = document.getElementById('formContent');
+  const fields = formTemplates[currentForm].formFields;
+  form.innerHTML = '';
+
+  // Create the form fields dynamically
+  for (const label in fields) {
+    const inputType = fields[label];
+    const group = document.createElement('div');
+    group.className = 'form-group';
+
+    if (inputType === 'select') {
+      const select = document.createElement('select');
+      const options = ['Shared', 'Private', 'Premium'];
+      options.forEach(opt => {
+        const option = document.createElement('option');
+        option.value = opt;
+        option.text = opt;
+        select.appendChild(option);
+      });
+      group.innerHTML = `<label>${label}</label>`;
+      group.appendChild(select);
+    } else {
+      group.innerHTML = `<label>${label}</label><input type="${inputType}" placeholder="${label}" />`;
     }
+
+    form.appendChild(group);
+  }
+
+  // Add the "Enquiry Now" button
+  const submitBtn = document.createElement('button');
+  submitBtn.className = 'enquiry-btn';
+  submitBtn.type = 'submit';
+  submitBtn.innerText = 'ENQUIRY NOW →';
+
+  // Add event listener to show the popup message
+  submitBtn.addEventListener('click', (e) => {
+    e.preventDefault();  // Prevent the form from submitting
+    alert('Thank you! You can contact us at +91 8073353626 😊');
+  });
+
+  form.appendChild(submitBtn);
+}
+
   
     // Run after DOM is fully loaded
     document.addEventListener('DOMContentLoaded', () => {
@@ -1299,7 +1309,7 @@ function gtag_report_conversion(url) {
 
               
             <div class="fleet-card">
-              <img src="img/cars/forcetraveller.png" alt="Maruti Ertiga">
+              <img src="img/newimg/Artboard 1 (2).jpg" alt="Maruti Ertiga">
               <h4>Recliner Tempo Traveller</h4>
               <p><i class="fas fa-car"></i> 10 Seater &nbsp; | &nbsp; <i class="fas fa-user-tie"></i> 1 Driver</p>
               <div class="fleet-buttons">
@@ -1312,7 +1322,7 @@ function gtag_report_conversion(url) {
 
               
             <div class="fleet-card">
-              <img src="img/cars/forcetraveller.png" alt="Maruti Ertiga">
+              <img src="img/newimg/Artboard 2 (3).jpg" alt="Maruti Ertiga">
               <h4>Force Urbania</h4>
               <p><i class="fas fa-car"></i> 10 Seater &nbsp; | &nbsp; <i class="fas fa-user-tie"></i> 1 Driver</p>
               <div class="fleet-buttons">
@@ -1325,7 +1335,7 @@ function gtag_report_conversion(url) {
 
               
             <div class="fleet-card">
-              <img src="img/cars/forcetraveller.png" alt="Maruti Ertiga">
+              <img src="img/newimg/Artboard 2 (3).jpg" alt="Maruti Ertiga">
               <h4>Force Urbania</h4>
               <p><i class="fas fa-car"></i> 16 Seater &nbsp; | &nbsp; <i class="fas fa-user-tie"></i> 1 Driver</p>
               <div class="fleet-buttons">
@@ -1666,11 +1676,11 @@ function gtag_report_conversion(url) {
         <ul class="new_uls">
             <li class="first-child">
                <a href="#">
-                   <img nitro-lazy-src="https://cdn-haoeh.nitrocdn.com/DtCdzAdOiNcOdQfWOArXUYeJdoYlgSFt/assets/images/optimized/rev-de42c87/mumbai/wp-content/uploads/2022/02/0009_mumbai.png" class="alignnone ls-is-cached lazyloaded" decoding="async" nitro-lazy-empty="" id="MzQxNjoyMTI=-1" src="https://cdn-haoeh.nitrocdn.com/DtCdzAdOiNcOdQfWOArXUYeJdoYlgSFt/assets/images/optimized/rev-de42c87/mumbai/wp-content/uploads/2022/02/0009_mumbai.png"></a> Bangalore</li>
+                   <img nitro-lazy-src="https://cdn-haoeh.nitrocdn.com/DtCdzAdOiNcOdQfWOArXUYeJdoYlgSFt/assets/images/optimized/rev-de42c87/mumbai/wp-content/uploads/2022/02/0009_mumbai.png" class="alignnone ls-is-cached lazyloaded" decoding="async" nitro-lazy-empty="" id="MzQxNjoyMTI=-1" src="img/newimg/Banglore.jpg"></a> Bangalore</li>
                     <li><a href="#"><img nitro-lazy-src="img/0008_thane.webp" class=" ls-is-cached lazyloaded" decoding="async" nitro-lazy-empty="" id="MzQxNzoxNDY=-1" src="img/0008_thane.webp"></a>Shivmogga</li>
                      <li><img nitro-lazy-src="https://cdn-haoeh.nitrocdn.com/DtCdzAdOiNcOdQfWOArXUYeJdoYlgSFt/assets/images/optimized/rev-de42c87/mumbai/wp-content/uploads/2022/02/0007_pune.png" class=" ls-is-cached lazyloaded" decoding="async" nitro-lazy-empty="" id="MzQxODoxMDU=-1" src="img/0007_pune.webp"> Mysore</li>
-                      <li><img nitro-lazy-src="https://cdn-haoeh.nitrocdn.com/DtCdzAdOiNcOdQfWOArXUYeJdoYlgSFt/assets/images/optimized/rev-de42c87/mumbai/wp-content/uploads/2022/02/0006_ahemdabad.png" class=" ls-is-cached lazyloaded" decoding="async" nitro-lazy-empty="" id="MzQxOToxMTA=-1" src="https://cdn-haoeh.nitrocdn.com/DtCdzAdOiNcOdQfWOArXUYeJdoYlgSFt/assets/images/optimized/rev-de42c87/mumbai/wp-content/uploads/2022/02/0006_ahemdabad.png"> Coimbatore</li>
-                       <li><a href="#"><img nitro-lazy-src="https://cdn-haoeh.nitrocdn.com/DtCdzAdOiNcOdQfWOArXUYeJdoYlgSFt/assets/images/optimized/rev-de42c87/mumbai/wp-content/uploads/2022/02/0005_delhi.png" class=" ls-is-cached lazyloaded" decoding="async" nitro-lazy-empty="" id="MzQyMDoxNDY=-1" src="https://cdn-haoeh.nitrocdn.com/DtCdzAdOiNcOdQfWOArXUYeJdoYlgSFt/assets/images/optimized/rev-de42c87/mumbai/wp-content/uploads/2022/02/0005_delhi.png">Kochin</a></li>
+                      <li><img nitro-lazy-src="https://cdn-haoeh.nitrocdn.com/DtCdzAdOiNcOdQfWOArXUYeJdoYlgSFt/assets/images/optimized/rev-de42c87/mumbai/wp-content/uploads/2022/02/0006_ahemdabad.png" class=" ls-is-cached lazyloaded" decoding="async" nitro-lazy-empty="" id="MzQxOToxMTA=-1" src="img/newimg/Building.jpg"> Coimbatore</li>
+                       <li><a href="#"><img nitro-lazy-src="https://cdn-haoeh.nitrocdn.com/DtCdzAdOiNcOdQfWOArXUYeJdoYlgSFt/assets/images/optimized/rev-de42c87/mumbai/wp-content/uploads/2022/02/0005_delhi.png" class=" ls-is-cached lazyloaded" decoding="async" nitro-lazy-empty="" id="MzQyMDoxNDY=-1" src="img/newimg/City.jpg">Kochin</a></li>
                         </ul>
      </div>
     </div> 
