@@ -213,17 +213,20 @@ function gtag_report_conversion(url) {
                         </div>
                     </div>
                 </div>
+
+
                 <div class="carousel-item">
                   <img class="w-100" src="img/Banner-2.jpg" alt="tempo traveller rental bangalore, trusted tempo traveller service, tempo traveller hire for outstation trips">
                   <div class="carousel-caption d-flex flex-wrap flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-between" style="gap: 20px;">
+                    
                     <div class="col-12 col-lg-6 text-center text-lg-start mb-3 mb-lg-0">
                       <h6 class="text-white text-uppercase mb-3 animated slideInDown"> // Best Bus Rental In Bangalore //</h6>
                       <h1 class="display-6 text-white mb-4 pb-3 animated slideInDown">Single Maharaja seats for ultimate comfort</h1>
                     </div>
-                
-                    <div class="col-12 col-md-8 col-lg-5 d-flex justify-content-center">
+                    
+                    <!-- Full Form for large screens -->
+                    <div class="col-12 col-md-8 col-lg-5 d-none d-lg-flex justify-content-center">
                       <div class="form-container">
-                          
                         <style>
                           .form-container {
                             background: #ffc001;
@@ -233,7 +236,7 @@ function gtag_report_conversion(url) {
                             border-radius: 8px;
                             font-family: sans-serif;
                           }
-                        
+                
                           .tabs, .sub-tabs {
                             display: flex;
                             justify-content: space-between;
@@ -241,7 +244,7 @@ function gtag_report_conversion(url) {
                             gap: 6px;
                             flex-wrap: wrap;
                           }
-                        
+                
                           .tab-btn, .sub-tab-btn {
                             flex: 1;
                             padding: 10px 8px;
@@ -254,24 +257,24 @@ function gtag_report_conversion(url) {
                             border-radius: 2px;
                             white-space: nowrap;
                           }
-                        
+                
                           .tab-btn.active, .sub-tab-btn.active {
                             background-color: white;
                             color: black;
                           }
-                        
+                
                           .form-row {
                             display: flex;
                             gap: 10px;
                             flex-wrap: wrap;
                           }
-                        
+                
                           .form-group {
                             flex: 1 1 48%;
                             margin-bottom: 12px;
                             position: relative;
                           }
-                        
+                
                           .form-group input,
                           .form-group select {
                             width: 100%;
@@ -280,7 +283,7 @@ function gtag_report_conversion(url) {
                             border: 1px solid #ddd;
                             border-radius: 5px;
                           }
-                        
+                
                           .form-group::before {
                             content: "📍";
                             position: absolute;
@@ -289,45 +292,56 @@ function gtag_report_conversion(url) {
                             transform: translateY(-50%);
                             font-size: 1rem;
                           }
-                        
+                
                           .form-group.date::before {
                             content: "📅";
                           }
-                        
+                
+                          /* Reduced width and yellow background for the button */
                           .enquiry-btn {
-                            background: black;
-                            color: white;
-                            padding: 12px;
-                            width: 100%;
+                            background: #ffc001;  /* Yellow background */
+                            color: black;  /* Black text */
+                            padding: 12px 20px;  /* Adjusted padding for a smaller width */
                             border: none;
                             border-radius: 5px;
                             font-weight: bold;
-                            font-size: 0.95rem;
+                            font-size: 1rem;
                             cursor: pointer;
+                            width: auto;  /* Reduced width to fit content */
+                            margin: 0 auto;  /* Center the button */
                           }
-                        
+                
                           @media (max-width: 576px) {
                             .form-group {
                               flex: 1 1 100%;
                             }
                           }
                         </style>
-                        
-  </head>
-  <body>
-    <div class="form-container">
-      <div class="tabs">
-        <button class="tab-btn active" data-form="outstation" onclick="showForm('outstation', this)">Outstation</button>
-        <button class="tab-btn" data-form="intercity" onclick="showForm('intercity', this)">Intercity</button>
-        <button class="tab-btn" data-form="airport" onclick="showForm('airport', this)">Airport</button>
-      </div>
-    
-      <div class="sub-tabs" id="subTabs"></div>
-    
-      <form id="formContent">
-        <!-- Form will be loaded here -->
-      </form>
-    </div>
+                
+                        <div class="tabs">
+                          <button class="tab-btn active" data-form="outstation" onclick="showForm('outstation', this)">Outstation</button>
+                          <button class="tab-btn" data-form="intercity" onclick="showForm('intercity', this)">Intercity</button>
+                          <button class="tab-btn" data-form="airport" onclick="showForm('airport', this)">Airport</button>
+                        </div>
+                
+                        <div class="sub-tabs" id="subTabs"></div>
+                
+                        <form id="formContent">
+                          <!-- Form will be loaded here -->
+                        </form>
+                      </div>
+                    </div>
+                
+                    <!-- Enquire Now Button (visible on mobile) -->
+                    <div class="col-12 d-block d-lg-none text-center">
+                      <a href="enquirenowmobile.html">
+                        <button class="enquiry-btn">ENQUIRY NOW →</button>
+                      </a>
+                    </div>
+                    
+                  </div>
+                </div>
+                
     
     <script>
       const formTemplates = {
@@ -458,6 +472,10 @@ function gtag_report_conversion(url) {
       });
     </script>
     
+
+
+ 
+
                         </div>
                       </div>
                     </div>
