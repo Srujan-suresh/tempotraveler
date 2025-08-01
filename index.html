@@ -2097,6 +2097,22 @@ function gtag_report_conversion(url) {
             </div>
         </div>
     </div>
+
+    <script>
+      document.addEventListener("click", function (e) {
+        if (e.target.closest('[href*="tel:"]')) {
+          gtag("event", "conversion", {
+            send_to: "AW-17008348366/xjSzCMjln_0aEM6Zm64_",
+          })
+        }
+        if (e.target.closest('[href*="wa.me"]')) {
+          gtag("event", "conversion", {
+            send_to: "AW-17008348366/kG73CMvln_0aEM6Zm64_",
+          })
+        }
+      })
+    </script>
+    
 <script>
   function validateForm(event) {
     event.preventDefault();
